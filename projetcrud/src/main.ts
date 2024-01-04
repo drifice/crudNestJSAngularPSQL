@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .setTitle('Crud User')
-    .setDescription('API description')
+    .setDescription('TUTO création d un CRUD')
     .setVersion('1.0')
     .addTag('users')
     .build();
