@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  public menuActions: string[] = ["Add", "get"];
-  public myChoice() {
-  }
+  // public menuActions: string[] = ["Add", "get"];
+  // public myChoice() {
+  // }
 }
