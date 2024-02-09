@@ -4,6 +4,8 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
+  app.enableCors();
 
   const options = new DocumentBuilder()
     .setTitle('Crud User')
@@ -11,7 +13,6 @@ async function bootstrap() {
     .setVersion('1.0')
     .addTag('users')
     .build();
-
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
 

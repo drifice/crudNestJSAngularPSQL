@@ -10,12 +10,15 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  addUser(myUser:IUser): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/user',myUser)
-      .pipe(
-        tap(data => {
-          console.log("add User :", data);
-        })
-      );
+  addUser(myUser: IUser): Observable<any> {
+    return this.http.post('http://localhost:3000/api/users', myUser);
+  }
+
+  getAllUSer(): Observable<any> {
+    return this.http.get<any>('http://localhost:3000/api/users');
+  }
+
+  delete(id: any): Observable<any> {
+    return this.http.delete('http://localhost:3000/api/users/' + id);
   }
 }
