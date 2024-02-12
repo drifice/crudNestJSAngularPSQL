@@ -9,7 +9,6 @@ import { RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { UserModule } from './pages/user/user.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { UserModule } from './pages/user/user.module';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterOutlet,
-    UserModule,
     MatMenuModule,
     MatButtonModule,
     MatIconModule,

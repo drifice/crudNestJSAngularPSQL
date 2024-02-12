@@ -1,9 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserService } from '../../../core/services/user.service';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-see-user',
+  standalone: true,
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+  ],
   templateUrl: './see-user.component.html',
   styleUrl: './see-user.component.css'
 })
